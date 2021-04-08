@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import { TextField } from '../';
 
 const Signup = () => {
-  const validate = Yup.object({
+  const validate = Yup.object().shape({
     firstName: Yup.string().max(15, 'Must be 15 characters or less').required('Required'),
     lastName: Yup.string().max(20, 'Must be 20 characters or less').required('Required'),
     email: Yup.string().email('Email is invalid').required('Email is required'),
